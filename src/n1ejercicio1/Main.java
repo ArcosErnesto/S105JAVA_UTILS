@@ -7,16 +7,28 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		File ruta = new File("src\\directory");
+		File ruta = new File("src" + File.separator + "directory");
 
-		System.out.println(ruta.getAbsolutePath());
+		try {
+			System.out.println("Directorio absoluto: " + ruta.getAbsolutePath());
 
-		String[] list = ruta.list();
+			String[] list = ruta.list();
 
-		Arrays.sort(list);
+			if (list != null) {
+				Arrays.sort(list);
 
-		for (String string : list) {
-			System.out.println(string);
+				if (list.length == 0) {
+					System.out.println("El directorio está vacío.");
+				} else {
+					for (String string : list) {
+						System.out.println(string);
+					}
+				}
+			} else {
+				System.out.println("El directorio está vacío.");
+			}
+		} catch (NullPointerException e) {
+			System.out.println("El directorio no existe o no es válido.");
 		}
 	}
 }
