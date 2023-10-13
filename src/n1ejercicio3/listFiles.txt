@@ -1,0 +1,10 @@
+13/10/2023 20:06:30 - Contenido de C:\Users\arkul\eclipse-workspace\JavaSprint\S105JAVA_UTILS\src\directory
+D directory - Última modificación: 13/10/2023 18:09:33
+F archive2.txt - Última modificación: 11/10/2023 12:07:06
+F archive5.txt - Última modificación: 11/10/2023 12:40:23
+F archive6.txt - Última modificación: 11/10/2023 12:06:44
+D subDirectory1 - Última modificación: 11/10/2023 12:41:27
+F archive1.txt - Última modificación: 11/10/2023 12:41:20
+F archive3.txt - Última modificación: 11/10/2023 12:19:21
+F text3.txt - Última modificación: 11/10/2023 12:39:25
+F text5.txt - Última modificación: 11/10/2023 12:39:11

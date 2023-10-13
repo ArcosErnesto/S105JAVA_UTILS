@@ -5,22 +5,22 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
-public class Main {
+public class MainEx2 {
 
 	public static void main(String[] args) {
-		File ruta = new File("src" + File.separator + "directory");
+		File path = new File("src" + File.separator + "directory");
 
 		try {
-			ListDirectory(ruta);
+			ListDirectory(path);
 		} catch (NullPointerException e) {
 			System.out.println("El directorio no existe o no es válido.");
 		}
 	}
 
-	public static void ListDirectory(File ruta) {
-		if (ruta.isDirectory()) {
-			System.out.println("D " + ruta.getName() + " - Última modificación: " + getDate(ruta));
-			File[] list = ruta.listFiles();
+	public static void ListDirectory(File path) {
+		if (path.isDirectory()) {
+			System.out.println("D " + path.getName() + " - Última modificación: " + getDate(path));
+			File[] list = path.listFiles();
 			Arrays.sort(list);
 			if (list != null) {
 				for (File directory : list) {
@@ -29,8 +29,8 @@ public class Main {
 			} else {
 				System.out.println("El directorio está vacío.");
 			}
-		} else if (ruta.isFile()) {
-			System.out.println("F " + ruta.getName() + " - Última modificación: " + getDate(ruta));
+		} else if (path.isFile()) {
+			System.out.println("F " + path.getName() + " - Última modificación: " + getDate(path));
 		}
 	}
 
