@@ -1,4 +1,4 @@
-package n1ejercicio3;
+package n1ejercicio4;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,10 +10,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
-public class MainEx3 {
+public class MainEx4 {
+	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		String userPath;
 		File path = new File("src" + File.separator + "directory");
 		File writeFile = new File("src" + File.separator + "directory" + File.separator + "listFiles.txt");
 
@@ -33,7 +36,13 @@ public class MainEx3 {
 			System.out.println("El directorio no existe o no es válido.");
 		}
 
-		readFile(writeFile);
+		readListFile(writeFile);
+		userPath = selectFile();
+
+		File filePath = new File("src" + File.separator + userPath);
+		System.out.println(filePath);
+
+		readFile(filePath);
 
 	}
 
@@ -74,7 +83,7 @@ public class MainEx3 {
 		return sdf.format(date);
 	}
 
-	public static void readFile(File writeFile) {
+	public static void readListFile(File writeFile) {
 		try (BufferedReader br = new BufferedReader(new FileReader(writeFile))) {
 			String line = br.readLine();
 			while (line != null) {
@@ -87,6 +96,44 @@ public class MainEx3 {
 		} catch (IOException e) {
 			System.out.println("Error de lectura del archivo.");
 			e.printStackTrace();
+		}
+	}
+
+	public static String selectFile() {
+		String userFile, userDirectory, userPath = null;
+		System.out.println("¿En qué directorio está el archivo para leer?");
+		userDirectory = sc.nextLine();
+
+		while (userPath == null) {
+			if (userDirectory.equals("directory")) {
+				userDirectory = userDirectory + File.separator;
+				System.out.println("¿Qué archivo de la lista quieres leer?");
+				userFile = sc.nextLine();
+				userPath = userDirectory + userFile;
+			} else if (userDirectory.equals("subDirectory1")) {
+				System.out.println("¿Qué archivo de la lista quieres leer?");
+				userFile = sc.nextLine();
+				userDirectory = "directory" + File.separator + userDirectory + File.separator;
+				userPath = userDirectory + userFile;
+			} else {
+				System.out.println("Directorio no encontrado. Ingresa 'directory' o 'subDirectory1'.");
+				userDirectory = sc.nextLine();
+			}
+		}
+
+		return userPath;
+	}
+
+	private static void readFile(File filePath) {
+		try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("Archivo no encontrado.");
+		} catch (IOException e) {
+			System.out.println("Error de lectura del archivo.");
 		}
 	}
 }

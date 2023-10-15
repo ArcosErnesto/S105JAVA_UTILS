@@ -19,7 +19,7 @@ public class MainEx2 {
 
 	public static void ListDirectory(File path) {
 		if (path.isDirectory()) {
-			System.out.println("D " + path.getName() + " - Última modificación: " + getDate(path));
+			System.out.println("(D) " + path.getName() + " - Última modificación: " + getDate(path));
 			File[] list = path.listFiles();
 			Arrays.sort(list);
 			if (list != null) {
@@ -30,7 +30,7 @@ public class MainEx2 {
 				System.out.println("El directorio está vacío.");
 			}
 		} else if (path.isFile()) {
-			System.out.println("F " + path.getName() + " - Última modificación: " + getDate(path));
+			System.out.println("(F) " + path.getName() + " - Última modificación: " + getDate(path));
 		}
 	}
 
