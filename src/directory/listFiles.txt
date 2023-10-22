@@ -1,10 +1,22 @@
-15/10/2023 13:29:22 - Contenido de C:\Users\arkul\eclipse-workspace\JavaSprint\S105JAVA_UTILS\src\directory
+17/10/2023 14:12:25 - Contenido de C:\Users\arkul\eclipse-workspace\JavaSprint\S105JAVA_UTILS\src\directory
 (D) directory - Última modificación: 15/10/2023 13:08:03
 (F) archive2.txt - Última modificación: 14/10/2023 17:26:23
 (F) archive5.txt - Última modificación: 14/10/2023 17:26:55
 (F) archive6.txt - Última modificación: 14/10/2023 17:27:15
-(F) listFiles.txt - Última modificación: 15/10/2023 13:29:22
-(F) serializedFile.ser - Última modificación: 15/10/2023 13:28:43
+(F) listFiles.txt - Última modificación: 17/10/2023 14:12:25
+(F) serializedFile.ser - Última modificación: 17/10/2023 09:26:35
+(D) subDirectory1 - Última modificación: 13/10/2023 20:42:42
+(F) archive1.txt - Última modificación: 14/10/2023 17:28:26
+(F) archive3.txt - Última modificación: 14/10/2023 17:29:00
+(F) text3.txt - Última modificación: 14/10/2023 17:27:50
+(F) text5.txt - Última modificación: 14/10/2023 17:28:06
+22/10/2023 19:26:17 - Contenido de C:\Users\arkul\eclipse-workspace\JavaSprint\S105JAVA_UTILS\src\directory
+(D) directory - Última modificación: 15/10/2023 13:08:03
+(F) archive2.txt - Última modificación: 14/10/2023 17:26:23
+(F) archive5.txt - Última modificación: 14/10/2023 17:26:55
+(F) archive6.txt - Última modificación: 14/10/2023 17:27:15
+(F) listFiles.txt - Última modificación: 22/10/2023 19:26:17
+(F) serializedFile.ser - Última modificación: 17/10/2023 09:26:35
 (D) subDirectory1 - Última modificación: 13/10/2023 20:42:42
 (F) archive1.txt - Última modificación: 14/10/2023 17:28:26
 (F) archive3.txt - Última modificación: 14/10/2023 17:29:00

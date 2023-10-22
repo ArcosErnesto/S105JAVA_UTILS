@@ -17,7 +17,6 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class MainEx5 {
-
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -59,7 +58,6 @@ public class MainEx5 {
 		} catch (IOException e) {
 			System.out.println("Error al serializar objeto.");
 		}
-
 		try (ObjectInputStream readSerial = new ObjectInputStream(new FileInputStream(serialPath))) {
 			ObjEx5 serialObj = (ObjEx5) readSerial.readObject();
 			System.out.println("Objeto deserializado correctamente:");
@@ -163,5 +161,4 @@ public class MainEx5 {
 			System.out.println("Error de lectura del archivo.");
 		}
 	}
-
 }

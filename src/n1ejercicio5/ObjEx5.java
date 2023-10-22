@@ -2,7 +2,9 @@ package n1ejercicio5;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class ObjEx5 implements Serializable {
+
 	private String attribute;
 
 	public ObjEx5(String attribute) {
